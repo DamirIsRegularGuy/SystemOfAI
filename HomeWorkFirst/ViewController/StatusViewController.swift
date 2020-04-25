@@ -10,9 +10,15 @@ import UIKit
 
 class StatusViewController: UIViewController {
     
+        // MARK: - IBOutlets
+    
     @IBOutlet private  var statusLabel: UILabel!
     
+        // MARK: - Public Properties
+    
     var status = ""
+    
+        // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()

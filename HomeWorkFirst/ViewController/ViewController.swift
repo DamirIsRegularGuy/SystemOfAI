@@ -7,55 +7,69 @@
 //
 
 import UIKit
-
 class ViewController: UIViewController {
-    let login = "Abdurazakov"
-    let password = "Swiftbook"
+    
+    // MARK: - IBOutlets
     
     @IBOutlet  var userNameTextField: UITextField!
     @IBOutlet  var passwordTextField: UITextField!
     
+    // MARK: - Private Properties
+    
+    private let login = "Abdurazakov"
+    private let password = "Swiftbook"
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
-        
         addDoneButtonTo(userNameTextField)
         addDoneButtonTo(passwordTextField)
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         guard let vc = segue.destination as? StatusViewController else { return }
         
         switch segue.identifier {
-            
         case "segueForAutorization":
-            
-            guard userNameTextField.text == "Abdurazakov" else {
+            guard userNameTextField.text == login else {
                 vc.status = "Wrong Login"
                 return
             }
             
-            guard passwordTextField.text == "Swiftbook" else {
+            guard passwordTextField.text == password else {
                 vc.status = "Wrong password"
                 return
             }
             
-            vc.status = login
-            
+            vc.status = "Authorization Passed"
             
         case "segueForLogin":
             vc.status = "Abdurazakov"
             
         case "segueForPassword":
             vc.status = "Swiftbook"
+            
         default: break
         }
         
-        
-        
     }
+    
 }
+
+// MARK: - Extension
+
 extension ViewController: UITextFieldDelegate {
+    
+    // MARK: - Lifecycle
+    
+    // Скрытие клавиатуры по тапу за пределами Text View
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        view.endEditing(true) // Скрывает клавиатуру, вызванную для любого объекта
+    }
+    
+    // MARK: - Private methods
     
     // Метод для отображения кнопки "Готово" на цифровой клавиатуре
     private func addDoneButtonTo(_ textField: UITextField) {
@@ -76,23 +90,20 @@ extension ViewController: UITextFieldDelegate {
         keyboardToolbar.items = [flexBarButton, doneButton]
     }
     
-    @objc private func didTapDone() {
-        view.endEditing(true)
-    }
+    // MARK: - Public Methods
     
     // Скрываем клавиатуру нажатием на "Done"
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        
         return true
     }
     
-    // Скрытие клавиатуры по тапу за пределами Text View
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        
-        view.endEditing(true) // Скрывает клавиатуру, вызванную для любого объекта
-    }
+    // MARK: - Objc Method
     
+    @objc private func didTapDone() {
+        view.endEditing(true)
+    }
     
 }
 

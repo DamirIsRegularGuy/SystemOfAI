@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CD7C38C2454469600C3DB73 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CD7C38B2454469600C3DB73 /* Default-568h@2x.png */; };
 		6CE54E4822BED0E100CC826C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE54E4722BED0E100CC826C /* AppDelegate.swift */; };
 		6CE54E4A22BED0E100CC826C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE54E4922BED0E100CC826C /* ViewController.swift */; };
 		6CE54E4D22BED0E100CC826C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CE54E4B22BED0E100CC826C /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6CD7C38B2454469600C3DB73 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6CE54E4422BED0E100CC826C /* HomeWorkFirst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWorkFirst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CE54E4722BED0E100CC826C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CE54E4922BED0E100CC826C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 		6CE54E3B22BED0E100CC826C = {
 			isa = PBXGroup;
 			children = (
+				6CD7C38B2454469600C3DB73 /* Default-568h@2x.png */,
 				6CE54E4622BED0E100CC826C /* HomeWorkFirst */,
 				6CE54E5B22BED0E300CC826C /* HomeWorkFirstUITests */,
 				6CE54E4522BED0E100CC826C /* Products */,
@@ -78,11 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				6CE54E6722BED0FD00CC826C /* App */,
-				6CE54E4722BED0E100CC826C /* AppDelegate.swift */,
-				6CE54E5322BED0E300CC826C /* Info.plist */,
 				6CE54E6822BED14600CC826C /* ViewController */,
-				6CE54E4922BED0E100CC826C /* ViewController.swift */,
-				6CE54E6C22BEDFE800CC826C /* StatusViewController.swift */,
 				6CE54E6922BED15A00CC826C /* Resources */,
 				6CE54E4E22BED0E300CC826C /* Assets.xcassets */,
 				6CE54E6A22BED16800CC826C /* Storyboards */,
@@ -102,6 +101,8 @@
 		6CE54E6722BED0FD00CC826C /* App */ = {
 			isa = PBXGroup;
 			children = (
+				6CE54E4722BED0E100CC826C /* AppDelegate.swift */,
+				6CE54E5322BED0E300CC826C /* Info.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -109,6 +110,8 @@
 		6CE54E6822BED14600CC826C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6CE54E4922BED0E100CC826C /* ViewController.swift */,
+				6CE54E6C22BEDFE800CC826C /* StatusViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			files = (
 				6CE54E4F22BED0E300CC826C /* Assets.xcassets in Resources */,
 				6CE54E4D22BED0E100CC826C /* Main.storyboard in Resources */,
+				6CD7C38C2454469600C3DB73 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +389,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = HomeWorkFirst/Info.plist;
+				INFOPLIST_FILE = HomeWorkFirst/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -402,7 +406,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = HomeWorkFirst/Info.plist;
+				INFOPLIST_FILE = HomeWorkFirst/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
